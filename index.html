@@ -18,9 +18,10 @@
     
     <!-- Tailwind CSS CDN for correct rendering when downloaded -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: "class" }</script>
   </head>
 
-  <body class="bg-white text-gray-800">
+  <body class="bg-white text-gray-800 dark:bg-slate-900 dark:text-gray-100">
     <!-- ====== Navbar Section Start -->
     <header class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header">
       <div class="container px-4 mx-auto">
@@ -34,18 +35,31 @@
             <div>
               <nav id="navbarCollapse" class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none xl:px-6">
                 <ul class="block lg:flex 2xl:ml-20">
-                  <li class="relative group"><a href="#home" class="flex py-2 mx-8 text-base font-medium text-dark lg:text-white lg:py-6">Beranda</a></li>
-                  <li class="relative group"><a href="#about" class="flex py-2 mx-8 text-base font-medium text-dark lg:text-white lg:py-6">Tentang</a></li>
-                  <li class="relative group"><a href="#features" class="flex py-2 mx-8 text-base font-medium text-dark lg:text-white lg:py-6">Fitur</a></li>
-                  <li class="relative group"><a href="#pricing" class="flex py-2 mx-8 text-base font-medium text-dark lg:text-white lg:py-6">Harga</a></li>
-                  <li class="relative group"><a href="#team" class="flex py-2 mx-8 text-base font-medium text-dark lg:text-white lg:py-6">Tim</a></li>
-                  <li class="relative group"><a href="#contact" class="flex py-2 mx-8 text-base font-medium text-dark lg:text-white lg:py-6">Kontak</a></li>
+                  <li class="relative group"><a href="#home" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6">Beranda</a></li>
+                  <li class="relative group"><a href="#about" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6">Tentang</a></li>
+                  <li class="relative group"><a href="#features" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6">Fitur</a></li>
+                  <li class="relative group"><a href="#pricing" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6">Harga</a></li>
+                  <li class="relative group"><a href="#team" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6">Tim</a></li>
+                  <li class="relative group"><a href="#contact" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6">Kontak</a></li>
                 </ul>
               </nav>
             </div>
-            <div class="hidden sm:flex items-center justify-end pr-16 lg:pr-0">
-              <a href="signin.html" class="px-[22px] py-2 text-base font-medium text-white hover:opacity-70">Login</a>
-              <a href="signup.html" class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out rounded-md bg-white/20 hover:bg-white/100 hover:text-blue-600">Register</a>
+            <div class="hidden sm:flex items-center justify-end pr-16 lg:pr-0 gap-4">
+              <a href="signin.html" class="px-[22px] py-2 text-base font-medium text-white hover:opacity-70 theme-signin">Login</a>
+              <a href="signup.html" class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out rounded-md bg-white/20 hover:bg-white/100 hover:text-blue-600 theme-signup">Register</a>
+              
+              <!-- ====== Theme Toggler Start ====== -->
+              <button id="themeToggler" class="flex h-9 w-9 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors" aria-label="theme toggler">
+                <!-- Sun Icon -->
+                <svg id="sunIcon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.243 3.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.05 4.243a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM10 14a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.243-3.05a1 1 0 010-1.414l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM3 10a1 1 0 011-1h1a1 1 0 110 2H4a1 1 0 01-1-1zm3.05-4.243a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
+                </svg>
+                <!-- Moon Icon -->
+                <svg id="moonIcon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+              </button>
+              <!-- ====== Theme Toggler End ====== -->
             </div>
           </div>
         </div>
@@ -85,46 +99,46 @@
     <!-- ====== Hero Section End -->
 
     <!-- ====== Features Section Start -->
-    <section id="features" class="pt-20 pb-8 lg:pt-[120px] lg:pb-[70px]">
+    <section id="features" class="pt-20 pb-8 lg:pt-[120px] lg:pb-[70px] dark:bg-slate-900">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4">
             <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20 wow fadeInUp" data-wow-delay=".1s">
               <span class="block mb-2 text-lg font-semibold text-blue-600">Fitur Sistem</span>
-              <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">Layanan Kami</h2>
-              <p class="text-base text-gray-600">Sistem informasi ini dirancang untuk mengatasi berbagai kendala operasional dengan fitur digital yang mempermudah pelanggan dan pemilik usaha.</p>
+              <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px]">Layanan Kami</h2>
+              <p class="text-base text-gray-600 dark:text-gray-300">Sistem informasi ini dirancang untuk mengatasi berbagai kendala operasional dengan fitur digital yang mempermudah pelanggan dan pemilik usaha.</p>
             </div>
           </div>
         </div>
         <div class="flex flex-wrap -mx-4">
           <!-- Feature 1 -->
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".1s">
-            <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300">
+            <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300 bg-white dark:bg-slate-800 border dark:border-slate-700">
               <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl text-white font-bold text-2xl">
                 01
               </div>
-              <h4 class="mb-3 text-xl font-bold text-dark">Pemesanan Layanan</h4>
-              <p class="text-gray-600">Pelanggan dapat melakukan pemesanan layanan pencucian dan perawatan sepatu secara online tanpa harus antri.</p>
+              <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Pemesanan Layanan</h4>
+              <p class="text-gray-600 dark:text-gray-300">Pelanggan dapat melakukan pemesanan layanan pencucian dan perawatan sepatu secara online tanpa harus antri.</p>
             </div>
           </div>
           <!-- Feature 2 -->
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".2s">
-            <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300">
+            <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300 bg-white dark:bg-slate-800 border dark:border-slate-700">
               <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl text-white font-bold text-2xl">
                 02
               </div>
-              <h4 class="mb-3 text-xl font-bold text-dark">Pelacakan Status Pencucian</h4>
-              <p class="text-gray-600">Pantau proses pembersihan sepatu Anda secara real-time dari mulai pengerjaan hingga selesai.</p>
+              <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Pelacakan Status Pencucian</h4>
+              <p class="text-gray-600 dark:text-gray-300">Pantau proses pembersihan sepatu Anda secara real-time dari mulai pengerjaan hingga selesai.</p>
             </div>
           </div>
           <!-- Feature 3 -->
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".3s">
-            <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300">
+            <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300 bg-white dark:bg-slate-800 border dark:border-slate-700">
               <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl text-white font-bold text-2xl">
                 03
               </div>
-              <h4 class="mb-3 text-xl font-bold text-dark">Layanan Antar Jemput</h4>
-              <p class="text-gray-600">Pick up and delivery service yang memudahkan pelanggan tanpa perlu datang langsung ke lokasi usaha.</p>
+              <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Layanan Antar Jemput</h4>
+              <p class="text-gray-600 dark:text-gray-300">Pick up and delivery service yang memudahkan pelanggan tanpa perlu datang langsung ke lokasi usaha.</p>
             </div>
           </div>
         </div>
@@ -133,15 +147,15 @@
     <!-- ====== Features Section End -->
 
     <!-- ====== About Section Start -->
-    <section id="about" class="pt-20 pb-20 bg-gray-50 lg:pt-[120px] lg:pb-[120px]">
+    <section id="about" class="pt-20 pb-20 bg-gray-50 dark:bg-slate-800 lg:pt-[120px] lg:pb-[120px]">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap items-center -mx-4">
           <div class="w-full px-4 lg:w-1/2 wow fadeInUp" data-wow-delay=".1s">
             <div class="mb-12 lg:mb-0 max-w-[540px]">
-              <h2 class="mb-5 text-3xl font-bold leading-tight text-dark sm:text-[40px] sm:leading-[1.2]">
+              <h2 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
                 Tentang The Clean
               </h2>
-              <p class="mb-10 text-base leading-relaxed text-gray-600">
+              <p class="mb-10 text-base leading-relaxed text-gray-600 dark:text-gray-300">
                 The Clean Cleaning Shoes and Care adalah usaha yang bergerak di bidang jasa pembersihan dan perawatan sepatu yang berlokasi di Kabupaten Sukoharjo, Jawa Tengah. Kami menggunakan metode <strong>deep clean</strong> untuk menghilangkan kotoran secara menyeluruh.
                 <br/><br/>
                 Sistem informasi ini dikembangkan untuk mendigitalisasi operasional usaha, mulai dari transaksi hingga pembayaran pelanggan yang lebih transparan.
@@ -162,28 +176,28 @@
     <!-- ====== About Section End -->
 
     <!-- ====== Pricing Section Start -->
-    <section id="pricing" class="relative z-20 overflow-hidden bg-white pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+    <section id="pricing" class="relative z-20 overflow-hidden bg-white dark:bg-slate-900 pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4">
             <div class="mx-auto mb-[60px] max-w-[510px] text-center wow fadeInUp" data-wow-delay=".1s">
               <span class="block mb-2 text-lg font-semibold text-blue-600">Harga Layanan</span>
-              <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">Paket Perawatan Sepatu</h2>
-              <p class="text-base text-gray-600">Harga murah dan terjangkau, khusus didesain untuk pelajar, mahasiswa, dan pekerja yang peduli pada penampilan.</p>
+              <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px]">Paket Perawatan Sepatu</h2>
+              <p class="text-base text-gray-600 dark:text-gray-300">Harga murah dan terjangkau, khusus didesain untuk pelajar, mahasiswa, dan pekerja yang peduli pada penampilan.</p>
             </div>
           </div>
         </div>
         <div class="flex flex-wrap justify-center -mx-4">
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".1s">
-            <div class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white border border-blue-600 rounded-xl shadow-pricing sm:p-12 lg:px-6 lg:py-10 xl:p-14">
+            <div class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white dark:bg-slate-800 border border-blue-600 dark:border-blue-500/30 rounded-xl shadow-pricing sm:p-12 lg:px-6 lg:py-10 xl:p-14">
               <span class="block mb-4 text-lg font-semibold text-blue-600">Deep Clean Basic</span>
-              <h2 class="mb-5 text-4xl font-bold text-dark xl:text-[42px]">Rp 25.000</h2>
-              <p class="mb-8 text-base border-b border-[#F2F2F2] pb-8 text-gray-600">Membersihkan kotoran membandel secara menyeluruh pada bagian luar dan dalam sepatu.</p>
+              <h2 class="mb-5 text-4xl font-bold text-dark dark:text-white xl:text-[42px]">Rp 25.000</h2>
+              <p class="mb-8 text-base border-b border-[#F2F2F2] dark:border-slate-700 pb-8 text-gray-600 dark:text-gray-300">Membersihkan kotoran membandel secara menyeluruh pada bagian luar dan dalam sepatu.</p>
               <div class="mb-9 flex flex-col gap-[14px]">
-                <p class="text-base text-gray-600">✔ Pencucian Mendalam</p>
-                <p class="text-base text-gray-600">✔ Penghilang Bau</p>
-                <p class="text-base text-gray-600">✔ Layanan Antar Jemput</p>
-                <p class="text-base text-gray-600">✔ Pantau Status Online</p>
+                <p class="text-base text-gray-600 dark:text-gray-300">✔ Pencucian Mendalam</p>
+                <p class="text-base text-gray-600 dark:text-gray-300">✔ Penghilang Bau</p>
+                <p class="text-base text-gray-600 dark:text-gray-300">✔ Layanan Antar Jemput</p>
+                <p class="text-base text-gray-600 dark:text-gray-300">✔ Pantau Status Online</p>
               </div>
               <a href="signup.html" class="inline-block w-full px-7 py-3 text-base font-semibold text-center text-white transition bg-blue-600 rounded-md hover:bg-blue-700">Pesan Sekarang</a>
             </div>
@@ -194,14 +208,14 @@
     <!-- ====== Pricing Section End -->
 
     <!-- ====== Team Section Start -->
-    <section id="team" class="pt-20 pb-10 bg-gray-50 lg:pt-[120px] lg:pb-[80px]">
+    <section id="team" class="pt-20 pb-10 bg-gray-50 dark:bg-slate-800 lg:pt-[120px] lg:pb-[80px]">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4">
             <div class="mx-auto mb-[60px] max-w-[510px] text-center wow fadeInUp" data-wow-delay=".1s">
               <span class="block mb-2 text-lg font-semibold text-blue-600">Tim Pengembang</span>
-              <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">Kelompok 2</h2>
-              <p class="text-base text-gray-600">Fakultas Ilmu Komputer, Universitas Duta Bangsa Surakarta.</p>
+              <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px]">Kelompok 2</h2>
+              <p class="text-base text-gray-600 dark:text-gray-300">Fakultas Ilmu Komputer, Universitas Duta Bangsa Surakarta.</p>
             </div>
           </div>
         </div>
@@ -213,8 +227,8 @@
                 AA
               </div>
               <div>
-                <h4 class="mb-1 text-lg font-semibold text-dark">Ahmad Apriansyah</h4>
-                <p class="text-sm text-gray-600">NIM: 240101034</p>
+                <h4 class="mb-1 text-lg font-semibold text-dark dark:text-white">Ahmad Apriansyah</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">NIM: 240101034</p>
               </div>
             </div>
           </div>
@@ -225,8 +239,8 @@
                 PA
               </div>
               <div>
-                <h4 class="mb-1 text-lg font-semibold text-dark">Puja Auliya</h4>
-                <p class="text-sm text-gray-600">NIM: 240101049</p>
+                <h4 class="mb-1 text-lg font-semibold text-dark dark:text-white">Puja Auliya</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">NIM: 240101049</p>
               </div>
             </div>
           </div>
@@ -237,8 +251,8 @@
                 RS
               </div>
               <div>
-                <h4 class="mb-1 text-lg font-semibold text-dark">Rio Ananda Saleh</h4>
-                <p class="text-sm text-gray-600">NIM: 240101051</p>
+                <h4 class="mb-1 text-lg font-semibold text-dark dark:text-white">Rio Ananda Saleh</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300">NIM: 240101051</p>
               </div>
             </div>
           </div>
@@ -322,7 +336,8 @@
     </footer>
     <!-- ====== Footer Section End -->
   
-    <!-- ====== Navbar Sticky Script ====== -->
+    
+    <!-- ====== Navbar Sticky & Theme Logic Script ====== -->
     <script>
       window.onscroll = function () {
         const ud_header = document.querySelector(".ud-header");
@@ -330,41 +345,48 @@
         const navLinks = ud_header.querySelectorAll("nav ul li a");
         const signIn = ud_header.querySelector("a[href='signin.html']");
         const signUp = ud_header.querySelector("a[href='signup.html']");
+        const themeToggler = document.getElementById('themeToggler');
 
         if (window.pageYOffset > 50) {
           ud_header.classList.remove("absolute", "bg-transparent");
-          ud_header.classList.add("fixed", "bg-white", "shadow-md", "z-50", "transition-all", "duration-200");
+          ud_header.classList.add("fixed", "bg-white", "dark:bg-slate-900", "shadow-md", "z-50", "transition-all", "duration-200");
           
           logo.classList.remove("text-white");
-          logo.classList.add("text-blue-600");
+          logo.classList.add("text-blue-600", "dark:text-white");
+
+          themeToggler.classList.remove("text-white");
+          themeToggler.classList.add("text-gray-800", "dark:text-white");
 
           navLinks.forEach(link => {
             link.classList.remove("lg:text-white");
-            link.classList.add("lg:text-gray-800");
+            link.classList.add("text-gray-800", "dark:text-gray-200");
           });
 
           if (signIn) {
             signIn.classList.remove("text-white");
-            signIn.classList.add("text-gray-800");
+            signIn.classList.add("text-gray-800", "dark:text-gray-200");
           }
           if (signUp) {
             signUp.classList.remove("text-white", "bg-white/20", "hover:bg-white/100", "hover:text-blue-600");
             signUp.classList.add("bg-blue-600", "text-white", "hover:bg-blue-700");
           }
         } else {
-          ud_header.classList.remove("fixed", "bg-white", "shadow-md", "z-50");
+          ud_header.classList.remove("fixed", "bg-white", "dark:bg-slate-900", "shadow-md", "z-50");
           ud_header.classList.add("absolute", "bg-transparent");
           
-          logo.classList.remove("text-blue-600");
+          logo.classList.remove("text-blue-600", "dark:text-white");
           logo.classList.add("text-white");
+
+          themeToggler.classList.remove("text-gray-800", "dark:text-white");
+          themeToggler.classList.add("text-white");
 
           navLinks.forEach(link => {
             link.classList.add("lg:text-white");
-            link.classList.remove("lg:text-gray-800");
+            link.classList.remove("text-gray-800", "dark:text-gray-200");
           });
 
           if (signIn) {
-            signIn.classList.remove("text-dark", "text-gray-800");
+            signIn.classList.remove("text-gray-800", "dark:text-gray-200");
             signIn.classList.add("text-white");
           }
           if (signUp) {
@@ -373,6 +395,35 @@
           }
         }
       };
+
+      // Theme Toggler Logic
+      const themeToggler = document.getElementById('themeToggler');
+      const sunIcon = document.getElementById('sunIcon');
+      const moonIcon = document.getElementById('moonIcon');
+
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        document.documentElement.classList.remove('dark');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+
+      themeToggler.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          sunIcon.classList.add('hidden');
+          moonIcon.classList.remove('hidden');
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          sunIcon.classList.remove('hidden');
+          moonIcon.classList.add('hidden');
+        }
+      });
     </script>
   </body>
 </html>
