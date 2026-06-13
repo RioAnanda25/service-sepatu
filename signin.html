@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In | The Clean - Sistem Informasi Service Sepatu</title>
+    <title>Login | The Clean - Sistem Informasi Service Sepatu</title>
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="./src/css/tailwind.css" />
@@ -23,8 +23,9 @@
       <div class="container px-4 mx-auto">
         <div class="relative flex items-center justify-between -mx-4">
           <div class="max-w-full px-4 w-60">
-            <a href="index.html" class="block w-full py-5 text-2xl font-bold text-white navbar-logo">
-              The Clean.
+            <a href="index.html" class="flex items-center gap-2 py-5 text-2xl font-bold text-white navbar-logo">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa-htm3zT2h1cQ2cDBt_1K-2Lt_lviW4Y7oQ&s" alt="Logo The Clean" class="h-8 w-auto object-contain rounded-md" />
+              <span>The Clean.</span>
             </a>
           </div>
           <div class="flex items-center justify-between w-full px-4">
@@ -80,6 +81,7 @@
         </div>
       </div>
     </header>
+
     <div class="relative z-10 overflow-hidden bg-blue-600 pt-[120px] pb-[60px] md:pt-[130px] lg:pt-[160px]">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap items-center -mx-4">
@@ -91,20 +93,25 @@
         </div>
       </div>
     </div>
-    <section class="bg-[#F4F7FF] py-14 lg:py-20 dark:bg-slate-900">
+
+    <section class="relative overflow-hidden z-10 bg-[#F4F7FF] py-14 lg:py-20 dark:bg-slate-900">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4">
-            <div class="wow fadeInUp mx-auto max-w-[525px] overflow-hidden rounded-xl bg-white py-14 px-8 text-center sm:px-12 md:px-[60px] shadow-md dark:bg-slate-800 border dark:border-slate-700" data-wow-delay=".15s">
+            <div
+              class="wow fadeInUp mx-auto max-w-[525px] overflow-hidden rounded-xl bg-white py-14 px-8 text-center sm:px-12 md:px-[60px] shadow-md dark:bg-slate-800 border dark:border-slate-700"
+              data-wow-delay=".15s"
+            >
               <div class="mb-10 text-center">
-                <a href="index.html" class="inline-block text-3xl font-bold text-blue-600 dark:text-white mx-auto">
-                  The Clean.
+                <a href="index.html" class="inline-flex items-center gap-2 text-3xl font-bold text-blue-600 dark:text-white mx-auto">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa-htm3zT2h1cQ2cDBt_1K-2Lt_lviW4Y7oQ&s" alt="Logo The Clean" class="h-9 w-auto object-contain rounded-md" />
+                  <span>The Clean.</span>
                 </a>
               </div>
               <form>
                 <div class="mb-6">
                   <input
-                    type="email"
+                    type="text"
                     placeholder="Email"
                     class="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-body-color outline-none focus:border-blue-600 focus-visible:shadow-none dark:border-slate-700 dark:text-white"
                   />
@@ -119,11 +126,12 @@
                 <div class="mb-10">
                   <input
                     type="submit"
-                    value="Sign In"
+                    value="Login"
                     class="w-full cursor-pointer rounded-md border border-blue-600 bg-blue-600 px-5 py-3 text-base font-medium text-white transition hover:bg-blue-700"
                   />
                 </div>
               </form>
+              
               <p class="text-base text-gray-500 dark:text-gray-400">
                 Belum punya akun?
                 <a href="signup.html" class="text-blue-600 hover:underline">
@@ -135,16 +143,21 @@
         </div>
       </div>
     </section>
+
     <footer id="contact" class="relative z-10 bg-[#090E34] pt-20 lg:pt-[120px] text-gray-300 overflow-hidden">
-      <div class="absolute left-0 top-12 -z-10 h-80 w-80 rounded-full bg-gradient-to-tr from-blue-500/10 to-teal-400/20 blur-3xl pointer-events-none"></div>
-      <div class="absolute right-0 bottom-0 -z-10 h-72 w-72 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-400/20 blur-3xl pointer-events-none"></div>
+      <div class="absolute right-[-140px] bottom-[-140px] -z-10 h-[480px] w-[480px] rounded-full blur-3xl opacity-20 pointer-events-none"
+           style="background: radial-gradient(circle, rgba(56, 189, 248, 0.6) 0%, rgba(9, 14, 52, 0) 70%);"></div>
+      
+      <div class="absolute right-[-40px] bottom-[-40px] -z-10 h-[340px] w-[340px] rounded-full blur-3xl opacity-25 pointer-events-none"
+           style="background: radial-gradient(circle, rgba(30, 64, 175, 0.7) 0%, rgba(9, 14, 52, 0) 75%);"></div>
       
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4 justify-between">
           <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12 wow fadeInUp" data-wow-delay=".1s">
             <div class="mb-10 w-full">
-              <a href="index.html" class="mb-6 inline-block text-2xl font-bold text-white">
-                The Clean.
+              <a href="index.html" class="flex items-center gap-2 mb-6 text-2xl font-bold text-white">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa-htm3zT2h1cQ2cDBt_1K-2Lt_lviW4Y7oQ&s" alt="Logo The Clean" class="h-8 w-auto object-contain rounded-md" />
+                <span>The Clean.</span>
               </a>
               <p class="mb-8 max-w-[270px] text-base text-[#959CB1]">
                 Layanan kebersihan dan perawatan sepatu profesional. Menggunakan sistem terkomputerisasi yang cepat dan andal.
@@ -156,8 +169,8 @@
               <h4 class="mb-9 text-lg font-semibold text-white">Informasi Kontak</h4>
               <ul class="space-y-3 text-[#959CB1]">
                 <li>📍 Kabupaten Sukoharjo, Jawa Tengah</li>
-                <li>✉ info@theclean.com</li>
-                <li>🏢 Universitas Duta Bangsa Surakarta</li>
+                <li>✉ theclean@theclean.com</li>
+                <li>🏢 The Clean Cleaning Shoes and Care</li>
               </ul>
             </div>
           </div>
@@ -171,12 +184,14 @@
         </div>
       </div>
     </footer>
+
     <a
       href="javascript:void(0)"
       class="fixed left-auto items-center justify-center hidden w-10 h-10 text-white transition duration-300 ease-in-out rounded-md shadow-md back-to-top bottom-8 right-8 z-999 bg-blue-600 hover:bg-blue-700"
     >
       <span class="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"></span>
     </a>
+
     <script>
       window.onscroll = function () {
         const ud_header = document.querySelector(".ud-header");
@@ -202,6 +217,7 @@
             toggle.classList.add("bg-dark", "dark:bg-white");
           });
 
+          // Mengubah warna link menjadi gelap hanya untuk layar besar (desktop) agar tidak merusak menu mobile yang berlatar belakang putih
           navLinks.forEach(link => {
             link.classList.remove("lg:text-white");
             link.classList.add("text-gray-800", "dark:text-gray-200");
@@ -230,9 +246,10 @@
             toggle.classList.add("bg-white");
           });
 
+          // Mengembalikan link layar desktop ke warna putih terang saat berada kembali di atas
           navLinks.forEach(link => {
-            link.classList.add("lg:text-white");
             link.classList.remove("text-gray-800", "dark:text-gray-200");
+            link.classList.add("lg:text-white");
           });
 
           if (signIn) {

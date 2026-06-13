@@ -10,37 +10,58 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="./src/css/tailwind.css" />
     
-    <!-- ==== WOW JS ==== -->
     <script src="assets/js/wow.min.js"></script>
     <script>
       new WOW().init();
     </script>
     
-    <!-- Tailwind CSS CDN for correct rendering when downloaded -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: "class" }</script>
   </head>
 
   <body class="bg-white text-gray-800 dark:bg-slate-900 dark:text-gray-100">
-    <!-- ====== Navbar Section Start -->
     <header class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header">
       <div class="container px-4 mx-auto">
         <div class="relative flex items-center justify-between -mx-4">
           <div class="max-w-full px-4 w-60">
-            <a href="index.html" class="block w-full py-5 text-2xl font-bold text-white navbar-logo">
-              The Clean.
+            <a href="index.html" class="py-5 text-2xl font-bold text-white navbar-logo flex items-center gap-2">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa-htm3zT2h1cQ2cDBt_1K-2Lt_lviW4Y7oQ&s" alt="Logo The Clean" class="w-8 h-8 rounded-md object-contain" />
+              <span>The Clean.</span>
             </a>
           </div>
           <div class="flex items-center justify-between w-full px-4">
             <div>
-              <nav id="navbarCollapse" class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none xl:px-6">
+              <button
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+              >
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white ud-menu-toggle"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white ud-menu-toggle"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white ud-menu-toggle"></span>
+              </button>
+              <nav
+                id="navbarCollapse"
+                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none xl:px-6 dark:bg-slate-800 lg:dark:bg-transparent"
+              >
                 <ul class="block lg:flex 2xl:ml-20">
-                  <li class="relative group"><a href="#home" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Beranda</a></li>
-                  <li class="relative group"><a href="#about" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Tentang</a></li>
-                  <li class="relative group"><a href="#features" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Fitur</a></li>
-                  <li class="relative group"><a href="#pricing" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Harga</a></li>
-                  <li class="relative group"><a href="#team" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Tim</a></li>
-                  <li class="relative group"><a href="#contact" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Kontak</a></li>
+                  <li class="relative group">
+                    <a href="#home" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Beranda</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="#about" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Tentang</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="#features" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Fitur</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="#pricing" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Harga</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="#team" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Tim</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="#contact" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Kontak</a>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -48,27 +69,24 @@
               <a href="signin.html" class="px-[22px] py-2 text-base font-medium text-white hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200 theme-signin">Login</a>
               <a href="signup.html" class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out rounded-md bg-white/20 hover:bg-white/100 hover:text-blue-600 theme-signup">Register</a>
               
-              <!-- ====== Theme Toggler Start ====== -->
               <button id="themeToggler" class="flex h-9 w-9 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors" aria-label="theme toggler">
-                <!-- Sun Icon -->
                 <svg id="sunIcon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.243 3.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.05 4.243a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM10 14a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.243-3.05a1 1 0 010-1.414l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM3 10a1 1 0 011-1h1a1 1 0 110 2H4a1 1 0 01-1-1zm3.05-4.243a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.243 3.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-3.05 4.243a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM10 14a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.243-3.05a1 1 0 010 1.414l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM3 10a1 1 0 011-1h1a1 1 0 110 2H4a1 1 0 01-1-1zm3.05-4.243a1 1 0 010 1.414l-.707.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd"></path>
                 </svg>
-                <!-- Moon Icon -->
                 <svg id="moonIcon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                 </svg>
               </button>
-              <!-- ====== Theme Toggler End ====== -->
-            </div>
+              </div>
           </div>
         </div>
       </div>
     </header>
-    <!-- ====== Navbar Section End -->
 
-    <!-- ====== Hero Section Start -->
-    <section id="home" class="relative overflow-hidden bg-blue-600 pt-[120px] pb-[100px] md:pt-[130px] lg:pt-[160px]">
+    <section id="home" class="relative overflow-hidden bg-blue-600 pt-[120px] pb-[100px] md:pt-[130px] lg:pt-[160px] z-10">
+      <div class="absolute left-0 top-0 -z-10 h-80 w-80 rounded-full bg-gradient-to-br from-teal-400/20 to-indigo-500/30 blur-3xl pointer-events-none"></div>
+      <div class="absolute right-0 bottom-0 -z-10 h-[350px] w-[350px] rounded-full bg-gradient-to-tr from-cyan-400/20 to-emerald-400/20 blur-3xl pointer-events-none"></div>
+      
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap items-center -mx-4">
           <div class="w-full px-4">
@@ -96,9 +114,7 @@
         </div>
       </div>
     </section>
-    <!-- ====== Hero Section End -->
 
-    <!-- ====== Features Section Start -->
     <section id="features" class="pt-20 pb-8 lg:pt-[120px] lg:pb-[70px] dark:bg-slate-900">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4">
@@ -111,34 +127,28 @@
           </div>
         </div>
         <div class="flex flex-wrap -mx-4">
-          <!-- Feature 1 -->
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".1s">
             <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300 bg-white dark:bg-slate-800 border dark:border-slate-700">
-              <!-- REVISI: Menambahkan utilitas shadow warna biru (shadow-lg shadow-blue-500/50) agar serasi seperti referensi template Play TailGrids -->
-              <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl text-white font-bold text-2xl shadow-lg shadow-blue-500/50 dark:shadow-blue-500/30">
-                01
+              <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl p-4 shadow-lg shadow-blue-500/50 dark:shadow-blue-500/30 transform transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <img src="https://cdn-icons-png.flaticon.com/128/3829/3829385.png" alt="Icon Pemesanan" class="w-full h-full object-contain brightness-0 invert" />
               </div>
               <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Pemesanan Layanan</h4>
               <p class="text-gray-600 dark:text-gray-300">Pelanggan dapat melakukan pemesanan layanan pencucian dan perawatan sepatu secara online tanpa harus antri.</p>
             </div>
           </div>
-          <!-- Feature 2 -->
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".2s">
             <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300 bg-white dark:bg-slate-800 border dark:border-slate-700">
-              <!-- REVISI: Menambahkan utilitas shadow warna biru (shadow-lg shadow-blue-500/50) agar serasi seperti referensi template Play TailGrids -->
-              <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl text-white font-bold text-2xl shadow-lg shadow-blue-500/50 dark:shadow-blue-500/30">
-                02
+              <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl p-4 shadow-lg shadow-blue-500/50 dark:shadow-blue-500/30 transform transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <img src="https://cdn-icons-png.flaticon.com/128/3273/3273365.png" alt="Icon Pelacakan" class="w-full h-full object-contain brightness-0 invert" />
               </div>
               <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Pelacakan Status Pencucian</h4>
               <p class="text-gray-600 dark:text-gray-300">Pantau proses pembersihan sepatu Anda secara real-time dari mulai pengerjaan hingga selesai.</p>
             </div>
           </div>
-          <!-- Feature 3 -->
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".3s">
             <div class="mb-8 p-10 shadow-md rounded-xl hover:shadow-lg transition duration-300 bg-white dark:bg-slate-800 border dark:border-slate-700">
-              <!-- REVISI: Menambahkan utilitas shadow warna biru (shadow-lg shadow-blue-500/50) agar serasi seperti referensi template Play TailGrids -->
-              <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl text-white font-bold text-2xl shadow-lg shadow-blue-500/50 dark:shadow-blue-500/30">
-                03
+              <div class="flex items-center justify-center w-[70px] h-[70px] mb-8 bg-blue-600 rounded-2xl p-4 shadow-lg shadow-blue-500/50 dark:shadow-blue-500/30 transform transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                <img src="https://cdn-icons-png.flaticon.com/128/11478/11478026.png" alt="Icon Antar Jemput" class="w-full h-full object-contain brightness-0 invert" />
               </div>
               <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">Layanan Antar Jemput</h4>
               <p class="text-gray-600 dark:text-gray-300">Pick up and delivery service yang memudahkan pelanggan tanpa perlu datang langsung ke lokasi usaha.</p>
@@ -147,9 +157,6 @@
         </div>
       </div>
     </section>
-    <!-- ====== Features Section End -->
-
-    <!-- ====== About Section Start -->
     <section id="about" class="pt-20 pb-20 bg-gray-50 dark:bg-slate-800 lg:pt-[120px] lg:pb-[120px]">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap items-center -mx-4">
@@ -176,9 +183,6 @@
         </div>
       </div>
     </section>
-    <!-- ====== About Section End -->
-
-    <!-- ====== Pricing Section Start -->
     <section id="pricing" class="relative z-20 overflow-hidden bg-white dark:bg-slate-900 pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4">
@@ -186,31 +190,59 @@
             <div class="mx-auto mb-[60px] max-w-[510px] text-center wow fadeInUp" data-wow-delay=".1s">
               <span class="block mb-2 text-lg font-semibold text-blue-600">Harga Layanan</span>
               <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px]">Paket Perawatan Sepatu</h2>
-              <p class="text-base text-gray-600 dark:text-gray-300">Harga murah dan terjangkau, khusus didesain untuk pelajar, mahasiswa, dan pekerja yang peduli pada penampilan.</p>
+              <p class="text-base text-gray-600 dark:text-gray-300">Harga murah dan terjangkau, khusus didesain untuk pelajar, mahasiswa, and pekerja yang peduli pada penampilan.</p>
             </div>
           </div>
         </div>
         <div class="flex flex-wrap justify-center -mx-4">
           <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".1s">
-            <div class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white dark:bg-slate-800 border border-blue-600 dark:border-blue-500/30 rounded-xl shadow-pricing sm:p-12 lg:px-6 lg:py-10 xl:p-14">
-              <span class="block mb-4 text-lg font-semibold text-blue-600">Deep Clean Basic</span>
-              <h2 class="mb-5 text-4xl font-bold text-dark dark:text-white xl:text-[42px]">Rp 25.000</h2>
-              <p class="mb-8 text-base border-b border-[#F2F2F2] dark:border-slate-700 pb-8 text-gray-600 dark:text-gray-300">Membersihkan kotoran membandel secara menyeluruh pada bagian luar dan dalam sepatu.</p>
+            <div class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-pricing sm:p-12 lg:px-6 lg:py-10 xl:p-14 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <span class="block mb-4 text-lg font-semibold text-blue-600">Fast Clean</span>
+              <h2 class="mb-5 text-4xl font-bold text-dark dark:text-white xl:text-[42px]">Rp 20.000</h2>
+              <p class="mb-8 text-base border-b border-[#F2F2F2] dark:border-slate-700 pb-8 text-gray-600 dark:text-gray-300">Layanan cuci kilat/biasa untuk membersihkan kotoran ringan di bagian luar sepatu dengan cepat.</p>
               <div class="mb-9 flex flex-col gap-[14px]">
-                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Pencucian Mendalam</p>
-                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Penghilang Bau</p>
-                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Layanan Antar Jemput</p>
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Pencucian Standar (Luar)</p>
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Proses Sangat Cepat</p>
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Pantau Status Online</p>
+                <p class="text-base text-gray-400 dark:text-gray-500 line-through"><span class="text-red-500 font-bold mr-1">❌</span> Delivery Service</p>
+              </div>
+              <a href="signup.html" class="inline-block w-full px-7 py-3 text-base font-semibold text-center text-blue-600 dark:text-white border border-blue-600 dark:border-slate-600 rounded-md hover:bg-blue-600 hover:text-white transition">Pesan Sekarang</a>
+            </div>
+          </div>
+
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".2s">
+            <div class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white dark:bg-slate-800 border-2 border-blue-600 rounded-xl shadow-pricing sm:p-12 lg:px-6 lg:py-10 xl:p-14 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <span class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-bl-lg">REKOMENDASI</span>
+              <span class="block mb-4 text-lg font-semibold text-blue-600">Deep Clean</span>
+              <h2 class="mb-5 text-4xl font-bold text-dark dark:text-white xl:text-[42px]">Rp 25.000</h2>
+              <p class="mb-8 text-base border-b border-[#F2F2F2] dark:border-slate-700 pb-8 text-gray-600 dark:text-gray-300">Layanan lebih bagus dan menyeluruh untuk mengangkat noda membandel pada semua bagian sepatu.</p>
+              <div class="mb-9 flex flex-col gap-[14px]">
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Pencucian Mendalam (Luar & Dalam)</p>
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Pembersihan Noda Membandel</p>
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Penghilang Bau & Bakteri</p>
                 <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Pantau Status Online</p>
               </div>
               <a href="signup.html" class="inline-block w-full px-7 py-3 text-base font-semibold text-center text-white transition bg-blue-600 rounded-md hover:bg-blue-700">Pesan Sekarang</a>
             </div>
           </div>
+
+          <div class="w-full px-4 md:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".3s">
+            <div class="relative z-10 px-8 py-10 mb-10 overflow-hidden bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-pricing sm:p-12 lg:px-6 lg:py-10 xl:p-14 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <span class="block mb-4 text-lg font-semibold text-blue-600">Express</span>
+              <h2 class="mb-5 text-4xl font-bold text-dark dark:text-white xl:text-[42px]">Rp 45.000</h2>
+              <p class="mb-8 text-base border-b border-[#F2F2F2] dark:border-slate-700 pb-8 text-gray-600 dark:text-gray-300">Layanan super cepat prioritas utama tinggi yang sudah mencakup fasilitas kirim / delivery langsung.</p>
+              <div class="mb-9 flex flex-col gap-[14px]">
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Pembersihan Kilat Prioritas</p>
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Layanan Kirim / Delivery Kurir</p>
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Antar Jemput ke Lokasi</p>
+                <p class="text-base text-gray-600 dark:text-gray-300"><span class="text-green-500 font-bold mr-1">✔</span> Pantau Status Online</p>
+              </div>
+              <a href="signup.html" class="inline-block w-full px-7 py-3 text-base font-semibold text-center text-blue-600 dark:text-white border border-blue-600 dark:border-slate-600 rounded-md hover:bg-blue-600 hover:text-white transition">Pesan Sekarang</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- ====== Pricing Section End -->
-
-    <!-- ====== Team Section Start -->
     <section id="team" class="pt-20 pb-10 bg-gray-50 dark:bg-slate-800 lg:pt-[120px] lg:pb-[80px]">
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4">
@@ -223,7 +255,6 @@
           </div>
         </div>
         <div class="flex flex-wrap justify-center -mx-4">
-          <!-- Member 1 -->
           <div class="w-full px-4 sm:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".1s">
             <div class="mb-10 text-center">
               <div class="mx-auto mb-5 overflow-hidden rounded-full w-[120px] h-[120px] bg-blue-100 flex items-center justify-center text-blue-600 text-3xl font-bold">
@@ -235,7 +266,6 @@
               </div>
             </div>
           </div>
-          <!-- Member 2 -->
           <div class="w-full px-4 sm:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".2s">
             <div class="mb-10 text-center">
               <div class="mx-auto mb-5 overflow-hidden rounded-full w-[120px] h-[120px] bg-blue-100 flex items-center justify-center text-blue-600 text-3xl font-bold">
@@ -247,7 +277,6 @@
               </div>
             </div>
           </div>
-          <!-- Member 3 -->
           <div class="w-full px-4 sm:w-1/2 lg:w-1/3 wow fadeInUp" data-wow-delay=".3s">
             <div class="mb-10 text-center">
               <div class="mx-auto mb-5 overflow-hidden rounded-full w-[120px] h-[120px] bg-blue-100 flex items-center justify-center text-blue-600 text-3xl font-bold">
@@ -262,11 +291,7 @@
         </div>
       </div>
     </section>
-    <!-- ====== Team Section End -->
-
-    <!-- ====== Footer Section Start -->
     <footer id="contact" class="relative z-10 bg-[#090E34] pt-20 lg:pt-[120px] text-gray-300 overflow-hidden">
-      <!-- ====== Footer Gradient Circles Start ====== -->
       <div class="absolute bottom-0 left-0 -z-10 h-72 w-72 rounded-full bg-gradient-to-tr from-green-500/20 to-cyan-400/20 blur-3xl pointer-events-none"></div>
       <div class="absolute right-0 top-12 -z-10 h-80 w-80 rounded-full bg-gradient-to-br from-blue-500/10 to-teal-400/20 blur-3xl pointer-events-none"></div>
       <div class="absolute -bottom-10 right-10 -z-10 opacity-40 pointer-events-none">
@@ -280,14 +305,13 @@
           </defs>
         </svg>
       </div>
-      <!-- ====== Footer Gradient Circles End ====== -->
       <div class="container px-4 mx-auto">
         <div class="flex flex-wrap -mx-4">
-          <!-- Kolom 1: Logo & Deskripsi -->
           <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12 wow fadeInUp" data-wow-delay=".1s">
             <div class="mb-10 w-full">
-              <a href="index.html" class="mb-6 inline-block text-2xl font-bold text-white">
-                The Clean.
+              <a href="index.html" class="mb-6 text-2xl font-bold text-white flex items-center gap-2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa-htm3zT2h1cQ2cDBt_1K-2Lt_lviW4Y7oQ&s" alt="Logo The Clean" class="w-8 h-8 rounded-md object-contain" />
+                <span>The Clean.</span>
               </a>
               <p class="mb-8 max-w-[270px] text-base text-[#959CB1]">
                 Layanan kebersihan dan perawatan sepatu profesional. Menggunakan sistem terkomputerisasi yang cepat dan andal.
@@ -295,7 +319,6 @@
             </div>
           </div>
           
-          <!-- Kolom 2: Tautan Menu -->
           <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12 wow fadeInUp" data-wow-delay=".15s">
             <div class="mb-10 w-full">
               <h4 class="mb-9 text-lg font-semibold text-white">Tentang Kami</h4>
@@ -308,7 +331,6 @@
             </div>
           </div>
 
-          <!-- Kolom 3: Fitur / Layanan -->
           <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-3/12 wow fadeInUp" data-wow-delay=".2s">
             <div class="mb-10 w-full">
               <h4 class="mb-9 text-lg font-semibold text-white">Fitur Sistem</h4>
@@ -320,7 +342,6 @@
             </div>
           </div>
 
-          <!-- Kolom 4: Informasi Kontak -->
           <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-4/12 wow fadeInUp" data-wow-delay=".25s">
             <div class="mb-10 w-full">
               <h4 class="mb-9 text-lg font-semibold text-white">Informasi Kontak</h4>
@@ -343,7 +364,6 @@
         </div>
       </div>
 
-      <!-- Copyright Area -->
       <div class="mt-12 border-t border-white border-opacity-10 py-8 bg-[#0b113c]">
         <div class="container px-4 mx-auto text-center">
           <p class="text-base text-[#959CB1]">
@@ -352,10 +372,6 @@
         </div>
       </div>
     </footer>
-    <!-- ====== Footer Section End -->
-  
-    
-    <!-- ====== Navbar Sticky & Theme Logic Script ====== -->
     <script>
       window.onscroll = function () {
         const ud_header = document.querySelector(".ud-header");
@@ -364,6 +380,7 @@
         const signIn = ud_header.querySelector("a[href='signin.html']");
         const signUp = ud_header.querySelector("a[href='signup.html']");
         const themeToggler = document.getElementById('themeToggler');
+        const menuToggle = ud_header.querySelectorAll(".ud-menu-toggle");
 
         if (window.pageYOffset > 50) {
           ud_header.classList.remove("absolute", "bg-transparent");
@@ -374,6 +391,11 @@
 
           themeToggler.classList.remove("text-white");
           themeToggler.classList.add("text-gray-800", "dark:text-white");
+
+          menuToggle.forEach(toggle => {
+            toggle.classList.remove("bg-white");
+            toggle.classList.add("bg-dark", "dark:bg-white");
+          });
 
           navLinks.forEach(link => {
             link.classList.remove("lg:text-white");
@@ -398,9 +420,14 @@
           themeToggler.classList.remove("text-gray-800", "dark:text-white");
           themeToggler.classList.add("text-white");
 
+          menuToggle.forEach(toggle => {
+            toggle.classList.remove("bg-dark", "dark:bg-white");
+            toggle.classList.add("bg-white");
+          });
+
           navLinks.forEach(link => {
-            link.classList.add("lg:text-white");
             link.classList.remove("text-gray-800", "dark:text-gray-200");
+            link.classList.add("lg:text-white");
           });
 
           if (signIn) {
@@ -413,6 +440,21 @@
           }
         }
       };
+
+      const navbarToggler = document.querySelector("#navbarToggler");
+      const navbarCollapse = document.querySelector("#navbarCollapse");
+
+      navbarToggler.addEventListener("click", () => {
+        navbarToggler.classList.toggle("navbarTogglerActive");
+        navbarCollapse.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll("#navbarCollapse ul li a").forEach((e) =>
+        e.addEventListener("click", () => {
+          navbarToggler.classList.remove("navbarTogglerActive");
+          navbarCollapse.classList.add("hidden");
+        })
+      );
 
       // Theme Toggler Logic
       const themeToggler = document.getElementById('themeToggler');
