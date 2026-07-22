@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | The Clean - Sistem Informasi Service Sepatu</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="./src/css/tailwind.css" />
+
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: "class" }</script>
+  </head>
+
+  <body class="bg-white text-gray-800 dark:bg-slate-900 dark:text-gray-100">
+    <header class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header">
+      <div class="container px-4 mx-auto">
+        <div class="relative flex items-center justify-between -mx-4">
+          <div class="max-w-full px-4 w-60">
+            <a href="index.php" class="flex items-center gap-2 py-5 text-2xl font-bold text-white navbar-logo">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa-htm3zT2h1cQ2cDBt_1K-2Lt_lviW4Y7oQ&s" alt="Logo The Clean" class="h-8 w-auto object-contain rounded-md" />
+              <span>The Clean.</span>
+            </a>
+          </div>
+          <div class="flex items-center justify-between w-full px-4">
+            <div>
+              <button
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+              >
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white ud-menu-toggle"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white ud-menu-toggle"></span>
+                <span class="relative my-[6px] block h-[2px] w-[30px] bg-white ud-menu-toggle"></span>
+              </button>
+              <nav
+                id="navbarCollapse"
+                class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:shadow-none xl:px-6"
+              >
+                <ul class="block lg:flex 2xl:ml-20">
+                  <li class="relative group">
+                    <a href="index.php#home" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Beranda</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="index.php#about" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Tentang</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="index.php#features" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Fitur</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="index.php#pricing" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Harga</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="index.php#team" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Tim</a>
+                  </li>
+                  <li class="relative group">
+                    <a href="index.php#contact" class="flex py-2 mx-8 text-base font-medium text-dark dark:text-white lg:text-white lg:py-6 hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200">Kontak</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="hidden sm:flex items-center justify-end pr-16 lg:pr-0 gap-4">
+              <a href="signin.php" class="px-[22px] py-2 text-base font-medium text-white hover:text-blue-600 lg:hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200 theme-signin">Login</a>
+              <a href="signup.php" class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out rounded-md bg-white/20 hover:bg-white/100 hover:text-blue-600 theme-signup">Register</a>
+              
+              <button id="themeToggler" class="flex h-9 w-9 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors" aria-label="theme toggler">
+                <svg id="sunIcon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.243 3.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <svg id="moonIcon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="relative z-10 overflow-hidden bg-blue-600 pt-[120px] pb-[60px] md:pt-[130px] lg:pt-[160px]">
+      <div class="container px-4 mx-auto">
+        <div class="flex flex-wrap items-center -mx-4">
+          <div class="w-full px-4">
+            <div class="text-center">
+              <h1 class="text-3xl font-bold text-white sm:text-4xl">Login</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="relative overflow-hidden z-10 bg-[#F4F7FF] py-14 lg:py-20 dark:bg-slate-900">
+      <div class="container px-4 mx-auto">
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full px-4">
+            <div
+              class="wow fadeInUp mx-auto max-w-[525px] overflow-hidden rounded-xl bg-white py-14 px-8 text-center sm:px-12 md:px-[60px] shadow-md dark:bg-slate-800 border dark:border-slate-700"
+              data-wow-delay=".15s"
+            >
+              <div class="mb-10 text-center">
+                <a href="index.php" class="inline-flex items-center gap-2 text-3xl font-bold text-blue-600 dark:text-white mx-auto">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa-htm3zT2h1cQ2cDBt_1K-2Lt_lviW4Y7oQ&s" alt="Logo The Clean" class="h-9 w-auto object-contain rounded-md" />
+                  <span>The Clean.</span>
+                </a>
+              </div>
+
+              <form action="proses_login.php" method="POST">
+                <div class="mb-6">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                    class="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-body-color outline-none focus:border-blue-600 focus-visible:shadow-none dark:border-slate-700 dark:text-white"
+                  />
+                </div>
+                <div class="mb-6">
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                    class="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-body-color outline-none focus:border-blue-600 focus-visible:shadow-none dark:border-slate-700 dark:text-white"
+                  />
+                </div>
+                <div class="mb-10">
+                  <button
+                    type="submit"
+                    name="login"
+                    class="w-full cursor-pointer rounded-md border border-blue-600 bg-blue-600 px-5 py-3 text-base font-medium text-white transition hover:bg-blue-700"
+                  >Login</button>
+                </div>
+              </form>
+              <p class="text-base text-gray-500 dark:text-gray-400">
+                Belum punya akun?
+                <a href="signup.php" class="text-blue-600 hover:underline">
+                  Daftar di sini
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="relative z-10 bg-[#090E34] pt-20 lg:pt-[120px] text-gray-300 overflow-hidden">
+      <div class="absolute right-[-140px] bottom-[-140px] -z-10 h-[480px] w-[480px] rounded-full blur-3xl opacity-20 pointer-events-none"
+           style="background: radial-gradient(circle, rgba(56, 189, 248, 0.6) 0%, rgba(9, 14, 52, 0) 70%);"></div>
+      
+      <div class="absolute right-[-40px] bottom-[-40px] -z-10 h-[340px] w-[340px] rounded-full blur-3xl opacity-25 pointer-events-none"
+           style="background: radial-gradient(circle, rgba(30, 64, 175, 0.7) 0%, rgba(9, 14, 52, 0) 75%);"></div>
+      
+      <div class="container px-4 mx-auto">
+        <div class="flex flex-wrap -mx-4 justify-between">
+          <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12 wow fadeInUp" data-wow-delay=".1s">
+            <div class="mb-10 w-full">
+              <a href="index.php" class="flex items-center gap-2 mb-6 text-2xl font-bold text-white">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa-htm3zT2h1cQ2cDBt_1K-2Lt_lviW4Y7oQ&s" alt="Logo The Clean" class="h-8 w-auto object-contain rounded-md" />
+                <span>The Clean.</span>
+              </a>
+              <p class="mb-8 max-w-[270px] text-base text-[#959CB1]">
+                Layanan kebersihan dan perawatan sepatu profesional. Menggunakan sistem terkomputerisasi yang cepat dan andal.
+              </p>
+            </div>
+          </div>
+          <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12 wow fadeInUp" data-wow-delay=".2s">
+            <div class="mb-10 w-full">
+              <h4 class="mb-9 text-lg font-semibold text-white">Informasi Kontak</h4>
+              <ul class="space-y-3 text-[#959CB1]">
+                <li>📍 Kabupaten Sukoharjo, Jawa Tengah</li>
+                <li>✉ theclean@theclean.com</li>
+                <li>🏢 The Clean Cleaning Shoes and Care</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-white border-opacity-10 py-8 bg-[#0b113c]">
+        <div class="container px-4 mx-auto text-center">
+          <p class="text-base text-[#959CB1]">
+            &copy; 2026 The Clean Cleaning Shoes and Care - Kelompok 2. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = function () {
+        const ud_header = document.querySelector(".ud-header");
+        const logo = document.querySelector(".navbar-logo");
+        const navLinks = ud_header.querySelectorAll("nav ul li a");
+        const signIn = ud_header.querySelector("a[href='signin.php']");
+        const signUp = ud_header.querySelector("a[href='signup.php']");
+        const themeToggler = document.getElementById('themeToggler');
+        const menuToggle = ud_header.querySelectorAll(".ud-menu-toggle");
+
+        if (window.pageYOffset > 50) {
+          ud_header.classList.remove("absolute", "bg-transparent");
+          ud_header.classList.add("fixed", "bg-white", "dark:bg-slate-900", "shadow-md", "z-50", "transition-all", "duration-200");
+          
+          logo.classList.remove("text-white");
+          logo.classList.add("text-blue-600", "dark:text-white");
+
+          themeToggler.classList.remove("text-white");
+          themeToggler.classList.add("text-gray-800", "dark:text-white");
+
+          menuToggle.forEach(toggle => {
+            toggle.classList.remove("bg-white");
+            toggle.classList.add("bg-dark", "dark:bg-white");
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove("lg:text-white");
+            link.classList.add("text-gray-800", "dark:text-gray-200");
+          });
+
+          if (signIn) {
+            signIn.classList.remove("text-white");
+            signIn.classList.add("text-gray-800", "dark:text-gray-200");
+          }
+          if (signUp) {
+            signUp.classList.remove("text-white", "bg-white/20", "hover:bg-white/100", "hover:text-blue-600");
+            signUp.classList.add("bg-blue-600", "text-white", "hover:bg-blue-700");
+          }
+        } else {
+          ud_header.classList.remove("fixed", "bg-white", "dark:bg-slate-900", "shadow-md", "z-50");
+          ud_header.classList.add("absolute", "bg-transparent");
+          
+          logo.classList.remove("text-blue-600", "dark:text-white");
+          logo.classList.add("text-white");
+
+          themeToggler.classList.remove("text-gray-800", "dark:text-white");
+          themeToggler.classList.add("text-white");
+
+          menuToggle.forEach(toggle => {
+            toggle.classList.remove("bg-dark", "dark:bg-white");
+            toggle.classList.add("bg-white");
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove("text-gray-800", "dark:text-gray-200");
+            link.classList.add("lg:text-white");
+          });
+
+          if (signIn) {
+            signIn.classList.remove("text-gray-800", "dark:text-gray-200");
+            signIn.classList.add("text-white");
+          }
+          if (signUp) {
+            signUp.classList.remove("bg-blue-600", "hover:bg-blue-700");
+            signUp.classList.add("text-white", "bg-white/20", "hover:bg-white/100", "hover:text-blue-600");
+          }
+        }
+      };
+
+      const navbarToggler = document.querySelector("#navbarToggler");
+      const navbarCollapse = document.querySelector("#navbarCollapse");
+
+      navbarToggler.addEventListener("click", () => {
+        navbarToggler.classList.toggle("navbarTogglerActive");
+        navbarCollapse.classList.toggle("hidden");
+      });
+
+      document.querySelectorAll("#navbarCollapse ul li a").forEach((e) =>
+        e.addEventListener("click", () => {
+          navbarToggler.classList.remove("navbarTogglerActive");
+          navbarCollapse.classList.add("hidden");
+        })
+      );
+
+      const themeToggler = document.getElementById('themeToggler');
+      const sunIcon = document.getElementById('sunIcon');
+      const moonIcon = document.getElementById('moonIcon');
+
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      } else {
+        document.documentElement.classList.remove('dark');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      }
+
+      themeToggler.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+          sunIcon.classList.add('hidden');
+          moonIcon.classList.remove('hidden');
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+          sunIcon.classList.remove('hidden');
+          moonIcon.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>
